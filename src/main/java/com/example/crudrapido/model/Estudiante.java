@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Column;
 import lombok.Data;
 
 @Data
@@ -16,7 +17,9 @@ public class Estudiante {
     private Long id;
 
     private String  studenId;
-    private String nombre;
-    private String apellido;
+    private String firsName;
+    private String lastName;
+
+    @Column(name = "email_address", unique = true )
     private String email;
 }
